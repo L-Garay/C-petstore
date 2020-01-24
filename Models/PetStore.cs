@@ -16,6 +16,7 @@ namespace petstore.Models
     {
       Dogs.AddRange(dogs);
     }
+
     public void AddAnimal(Cat cat)
     {
       Cats.Add(cat);
@@ -32,5 +33,9 @@ namespace petstore.Models
     {
       Birds.AddRange(birds);
     }
+    // public void BuyAnimal(Dog dog)
+    // {
+    //   Dogs.Remove()
+    // }
   }
 }
