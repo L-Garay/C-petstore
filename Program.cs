@@ -1,4 +1,5 @@
 ﻿using System;
+using petstore.Models;
 
 namespace petstore
 {
