@@ -33,9 +33,30 @@ namespace petstore.Models
     {
       Birds.AddRange(birds);
     }
-    // public void BuyAnimal(Dog dog)
-    // {
-    //   Dogs.Remove()
-    // }
+    public bool BuyDog(string name)
+    {
+      Dog dogToRemove = Dogs.Find(d => d.Name == name);
+      if (dogToRemove != null)
+      {
+        Dogs.Remove(dogToRemove);
+        bool bought = true;
+        return bought;
+
+      }
+      else
+      {
+        bool bought = false;
+        return bought;
+      }
+
+    }
+    public void BuyBird(string name)
+    {
+
+    }
+    public void BuyCat(string name)
+    {
+
+    }
   }
 }

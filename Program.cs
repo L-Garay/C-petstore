@@ -30,7 +30,29 @@ namespace petstore
         string choice = Console.ReadLine();
         if (choice.ToLower() == "rescue")
         {
+          Console.WriteLine("That's awesome! Thank you for saving a...");
+          Console.WriteLine("A) Dog");
+          Console.WriteLine("B) Bird");
+          Console.WriteLine("C) Cat");
+          string typeChoice2 = Console.ReadLine();
+          if (typeChoice2.ToLower() == "dog")
+          {
+            Console.WriteLine("What is the name of the dog you would like to rescue?");
+            string dogName = Console.ReadLine();
+            PetLand.BuyAnimal(dogName);
+          }
+          else if (typeChoice2.ToLower() == "bird")
+          {
 
+          }
+          else if (typeChoice2.ToLower() == "cat")
+          {
+
+          }
+          else
+          {
+
+          }
         }
         else if (choice.ToLower() == "adding")
         {
