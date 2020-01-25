@@ -50,12 +50,37 @@ namespace petstore.Models
       }
 
     }
-    public void BuyBird(string name)
+    public bool BuyBird(string name)
     {
+      Bird birdToRemove = Birds.Find(b => b.Name == name);
+      if (birdToRemove != null)
+      {
+        Birds.Remove(birdToRemove);
+        bool bought = true;
+        return bought;
 
+      }
+      else
+      {
+        bool bought = false;
+        return bought;
+      }
     }
-    public void BuyCat(string name)
+    public bool BuyCat(string name)
     {
+      Cat catToRemove = Cats.Find(c => c.Name == name);
+      if (catToRemove != null)
+      {
+        Cats.Remove(catToRemove);
+        bool bought = true;
+        return bought;
+
+      }
+      else
+      {
+        bool bought = false;
+        return bought;
+      }
 
     }
   }

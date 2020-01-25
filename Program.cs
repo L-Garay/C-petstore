@@ -38,20 +38,120 @@ namespace petstore
           if (typeChoice2.ToLower() == "dog")
           {
             Console.WriteLine("What is the name of the dog you would like to rescue?");
+            PetLand.Dogs.ForEach(d => Console.WriteLine(d.Name));
             string dogName = Console.ReadLine();
-            PetLand.BuyAnimal(dogName);
+            if (PetLand.BuyDog(dogName) == true)
+            {
+              PetLand.BuyDog(dogName);
+              Console.WriteLine($"Congratulations! The paperwork went through and you are now the proud owner of {dogName}!  Is that all the business you have today? y/n");
+              string continue2 = Console.ReadLine();
+              if (continue2 == "y")
+              {
+                Console.WriteLine("Goodbye, thanks for coming in today!");
+                interested = false;
+              }
+              else
+              {
+                Console.Clear();
+              }
+            }
+            else
+            {
+              Console.WriteLine("I'm sorry we couldn't seem to find that particular animal.  Would you like to try again? y/n");
+              string leave = Console.ReadLine();
+              if (leave == "y")
+              {
+                Console.Clear();
+              }
+              else
+              {
+                Console.WriteLine("Goodbye, thanks for coming in today!");
+                interested = false;
+              }
+            }
           }
           else if (typeChoice2.ToLower() == "bird")
           {
-
+            Console.WriteLine("What is the name of the bird you would like to rescue?");
+            string birdName = Console.ReadLine();
+            if (PetLand.BuyBird(birdName) == true)
+            {
+              PetLand.BuyBird(birdName);
+              Console.WriteLine($"Congratulations! The paperwork went through and you are now the proud owner of {birdName}!  Is that all the business you have today? y/n");
+              string continue2 = Console.ReadLine();
+              if (continue2 == "y")
+              {
+                Console.WriteLine("Goodbye, thanks for coming in today!");
+                interested = false;
+              }
+              else
+              {
+                Console.Clear();
+              }
+            }
+            else
+            {
+              Console.WriteLine("I'm sorry we couldn't seem to find that particular animal.  Would you like to try again? y/n");
+              string leave = Console.ReadLine();
+              if (leave == "y")
+              {
+                Console.Clear();
+              }
+              else
+              {
+                Console.WriteLine("Goodbye, thanks for coming in today!");
+                interested = false;
+              }
+            }
           }
           else if (typeChoice2.ToLower() == "cat")
           {
-
+            Console.WriteLine("What is the name of the cat you would like to rescue?");
+            string catName = Console.ReadLine();
+            PetLand.BuyCat(catName);
+            if (PetLand.BuyCat(catName) == true)
+            {
+              PetLand.BuyCat(catName);
+              Console.WriteLine($"Congratulations! The paperwork went through and you are now the proud owner of {catName}!  Is that all the business you have today? y/n");
+              string continue2 = Console.ReadLine();
+              if (continue2 == "y")
+              {
+                Console.WriteLine("Goodbye, thanks for coming in today!");
+                interested = false;
+              }
+              else
+              {
+                Console.Clear();
+              }
+            }
+            else
+            {
+              Console.WriteLine("I'm sorry we couldn't seem to find that particular animal.  Would you like to try again? y/n");
+              string leave = Console.ReadLine();
+              if (leave == "y")
+              {
+                Console.Clear();
+              }
+              else
+              {
+                Console.WriteLine("Goodbye, thanks for coming in today!");
+                interested = false;
+              }
+            }
           }
           else
           {
-
+            Console.WriteLine("That's not an option, do you want to exit? y/n");
+            string decision2 = Console.ReadLine();
+            if (decision2 == "y")
+            {
+              Console.WriteLine("Goodbye, thanks for coming in today!");
+              interested = false;
+            }
+            else
+            {
+              Console.Clear();
+            }
           }
         }
         else if (choice.ToLower() == "adding")
